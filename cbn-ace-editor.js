@@ -32,7 +32,7 @@
 		});
 	}, 10000);
 
-	Polymer('ace-element', {
+	Polymer('cbn-ace-editor', {
 		applyAuthorStyles: true,
 		mode: 'javascript',
 		theme: 'monokai',
@@ -202,7 +202,7 @@
 		themeChanged: function () {
 			this.editor.setTheme('ace/theme/' + this.theme);
 
-			this._whenMatches(document.head, '#ace-' + this.theme, 'applyTheme');
+			this._whenMatches(document.head, '#ace-' + this.theme.replace(/-/g, "_"), 'applyTheme');
 		},
 		_whenMatches: function (node, selector, method) {
 			var m = node.querySelector(selector);
@@ -273,7 +273,7 @@
 		editorBlurAction: function (event) {
 			if (this._value !== null && this._value != this.editorValue) {
 				this.fire('editor-change', {value: this.editorValue, oldValue: this._value});
-				this.$.log.innerText = 'last saved: ' + new Date().toLocaleDateString(navigator.languages[0]) + ' ' + new Date().toLocaleTimeString(navigator.languages[0]);
+				//this.$.log.innerText = 'last saved: ' + new Date().toLocaleDateString(navigator.languages[0]) + ' ' + new Date().toLocaleTimeString(navigator.languages[0]);
 			}
 			this._value = this.editorValue;
 		},

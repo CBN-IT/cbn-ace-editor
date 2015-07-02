@@ -7,33 +7,28 @@ Use of this source code is governed by a BSD-style
 license that can be found in the LICENSE file.
 -->
 
-<link rel="import" href="bower_components/core-icons/core-icons.html">
 <link rel="import" href="../core-icons/core-icons.html">
 
-<link rel="import" href="bower_components/core-icon/core-icon.html">
 <link rel="import" href="../core-icon/core-icon.html">
 
-<link rel="import" href="bower_components/core-iconset/core-iconset.html">
 <link rel="import" href="../core-iconset/core-iconset.html">
 
-<link rel="import" href="bower_components/polymer/polymer.html">
 <link rel="import" href="../polymer/polymer.html">
 
 <link rel="import" href="../core-ajax/core-ajax.html">
-<link rel="import" href="bower_components/core-ajax/core-ajax.html">
 <script src="src-min-noconflict/ace.js"></script>
 <script src="src-min-noconflict/ext-language_tools.js"></script>
 <script src="src-min-noconflict/snippets/snippets.js"></script>
 <script>
 
 </script>
-<polymer-element name="ace-element" attributes="theme mode value readonly wrap fontSize tabSize snippetsSrc autoCompleteSrc jsHintConfigSrc">
+<polymer-element name="cbn-ace-editor" attributes="theme mode value readonly wrap fontSize tabSize snippetsSrc autoCompleteSrc jsHintConfigSrc">
 
     <template>
         <core-ajax auto url="{{snippetsSrc}}" handleAs="text" on-core-response="{{snippetsLoaded}}"></core-ajax>
         <core-ajax auto url="{{autoCompleteSrc}}" handleAs="json" on-core-response="{{autoCompleteSrcLoaded}}"></core-ajax>
         <core-ajax auto url="{{jsHintConfigSrc}}" handleAs="json" on-core-response="{{jsHintConfigSrcLoaded}}"></core-ajax>
-        <link rel="stylesheet" href="./ace-element.css">
+        <link rel="stylesheet" href="cbn-ace-editor.css">
         <style type="text/css" media="screen">
             #editor {
                 width: 500px;
@@ -66,6 +61,6 @@ license that can be found in the LICENSE file.
 
     </template>
 
-    <script src="./ace-element.js"></script>
+    <script src="cbn-ace-editor.js"></script>
 
 </polymer-element>
