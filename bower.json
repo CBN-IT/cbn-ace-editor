@@ -5,7 +5,6 @@
         "polymer": "Polymer/polymer#^1.0.0"
     },
     "devDependencies": {
-        "iron-component-page": "polymerelements/iron-component-page#~1.0.5",
         "iron-component-page": "polymerelements/iron-component-page#~1.0.5"
     }
 }
