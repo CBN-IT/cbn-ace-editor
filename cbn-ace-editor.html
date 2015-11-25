@@ -46,8 +46,8 @@
 				 * Font size of editor text.
 				 */
 				fontSize: {
-					value: 12,
-					type: Number,
+					value: "12px",
+					type: String,
 					reflectToAttribute: true,
 					observer: '_fontSizeChanged'
 				},
@@ -104,7 +104,7 @@
 					type: Boolean,
 					reflectToAttribute: true,
 					observer: '_wrapChanged'
-				},
+				}
 			},
 			_observer: null,
 
