@@ -184,6 +184,7 @@
 			},
 			_valueChanged: function() {
 				if (! this.editor) return;
+				console.log("this should change the value of the editor")
 				this.editorValue = this.value;
 				this.editor.clearSelection();
 				this.editor.resize();
