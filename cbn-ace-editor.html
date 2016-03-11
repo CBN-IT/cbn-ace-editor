@@ -141,6 +141,7 @@
 				this._tabSizeChanged();
 				this.editor.on("blur", this._editorBlurAction.bind(this));
 				this.editor.on('change', this._editorChangeAction.bind(this));
+				this.editor.$blockScrolling = Infinity;
 				this.value = Polymer.dom(this).textContent;
 			},
 			_fontSizeChanged: function() {
