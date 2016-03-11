@@ -274,6 +274,7 @@
 			 */
 			set editorValue(value) {
 				this._value = value;
+				this.editor.scrollToLine(0);
 				this.editor.setValue(value);
 			},
 			/**
