@@ -10,8 +10,7 @@
         "demo",
         "index.html",
         "README.md",
-        "docs",
-        "src-noconflict"
+        "docs"
     ],
     "dependencies": {
         "polymer": "Polymer/polymer#1.3.1"
