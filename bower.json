@@ -7,7 +7,6 @@
         "bower_components",
         "../",
         "test",
-        "demo",
         "index.html",
         "README.md",
         "docs"
